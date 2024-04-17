@@ -4,6 +4,9 @@
 
 На сайте "BestDogCare" пользователи могут найти обширную информацию о различных кормах для собак, подходящих для разных пород и потребностей. Отзывы и рекомендации помогают выбрать оптимальный вариант, учитывая особенности каждого питомца.
 
+## Ссылка
+Live Demo: https://nfacdogs.vercel.app
+
 ## Функции
 1) Функция поиска породы
 2) Чат с исскуственным интеллектом, который настроен как собака. Использована API от OpenAI.
@@ -15,4 +18,8 @@
 3) Для парсинга использован API - DOGCEO
 
 ## Скриншоты
-![](https://github.com/Bwe0123/nfactask2024/edit/main/)
+![](https://github.com/Bwe0123/nfactask2024/blob/main/sc3.png)
+![](https://github.com/Bwe0123/nfactask2024/blob/main/sc2.png)
+![](https://github.com/Bwe0123/nfactask2024/blob/main/sc1.png)
+## Запуск
+Главная страница лежит в html index.html. Запустить нужно с использованием Extension'а "Live Server"
