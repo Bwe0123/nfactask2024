@@ -21,3 +21,5 @@ Live Demo: https://nfacdogs.vercel.app
 ![](https://github.com/Bwe0123/nfactask2024/blob/main/sc3.png)
 ![](https://github.com/Bwe0123/nfactask2024/blob/main/sc2.png)
 ![](https://github.com/Bwe0123/nfactask2024/blob/main/sc1.png)
+## Запуск
+Главная страница лежит в html index.html.Запустить нужно с использованием Extensionа "Live Server"
