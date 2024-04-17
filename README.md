@@ -15,6 +15,6 @@
 3) Для парсинга использован API - DOGCEO
 
 ## Скриншоты
-![](https://github.com/Bwe0123/nfactask2024/blob/main/sc1.png)
-![](https://github.com/Bwe0123/nfactask2024/blob/main/sc2.png)
 ![](https://github.com/Bwe0123/nfactask2024/blob/main/sc3.png)
+![](https://github.com/Bwe0123/nfactask2024/blob/main/sc2.png)
+![](https://github.com/Bwe0123/nfactask2024/blob/main/sc1.png)
