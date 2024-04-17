@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="open.js" defer></script>  
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"> 
+	<link rel="stylesheet" href="double.css"> 
+</head>
+<body>
+	<div class="navbar">
+        <div class="nav-list">
+           <a href="index2.html"><img src="images/icons8-собака-96.png"  width="100px" height="90px" class="main-icon"></a> 
+        </div>
+		<div class="nav">
+			<a href="eatendog.html">Nutrition</a>
+            <a href="uhoddog.html">Care</a>
+            <a href="ai.html">GavGPT</a>
+			<a href="index.html">Bonus</a>
+		</div>
+		<div class="search active">
+			<div class ='icon'></div>
+			<div class="input"> 
+				<input type="text" placeholder="Breed search" id="mySearch" class="input1">
+				<button id="searchButton">Поиск</button>
+			</div>
+			<span class="clear" onclick="Clear()"></span>
+		</div>
+			<div class="social-icons">
+				<a href="https://www.linkedin.com/in/bekzat-temirbolat-b93790304/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bm1uNnBoKTbGpGmxYRnSr3w%3D%3D"><i class="ri-linkedin-fill"></i></a>
+				<a href="https://t.me/calmativeq"><i class="ri-telegram-fill"></i></a>
+				<a href="https://github.com/Bwe0123"><i class="ri-github-fill"></i></a>
+			</div>
+	</div>
+		<div id="main-content"></div>
+		
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const searchInput = document.getElementById('mySearch');
+				const searchButton = document.getElementById('searchButton');
+		
+				if (searchInput && searchButton) {
+					searchInput.addEventListener('keydown', function(event) {
+						if (event.key === 'Enter') {
+							event.preventDefault();
+							searchFunction();
+						}
+					});
+		
+					searchButton.addEventListener('click', searchFunction);
+		
+					async function searchFunction() {
+						const searchTerm = searchInput.value.trim();
+						if (searchTerm !== '') {
+							window.location.href = `index3.html?q=${encodeURIComponent(searchTerm)}`;
+						} else {
+							alert('Введите поисковый запрос');
+						}
+					}
+				} else {
+					console.error('Элементы "mySearch" и/или "searchButton" не найдены на странице');
+				}
+			});
+		</script>	
+		</div>
+        <div class ="dog eaten">
+            <div class ="info">
+                <h1>Dog care</h1>
+            </div>
+            <div class ="information">
+				<p>Regular dog grooming is an important part of keeping your pet healthy and happy. Before the arrival of a new family member, arrange a personal space for games, rest and feeding. Remove all dangerous things that could harm the puppy. After this, you should take care of caring for your pet. Below are some helpful tips for all dog owners.</p>
+			</div>
+			<div class="information1">
+				
+				<p>Feed your dog high quality food.  Read the label of the intended food product. The first couple of ingredients should be meat, not meat by-products or grains. A proper diet will help your pet stay healthy for many years.
+                    Ask your veterinarian for dietary recommendations. Your veterinarian will recommend the food that is right for your puppy.
+                    Feed your dog on a regular schedule.  It is recommended to feed your pet twice a day, morning and evening. Divide the recommended amount of food indicated on the packaging into two parts.
+                    Don't give your dog a lot of treats or "people food."  This can lead to weight gain or health problems for your pet. Follow the rule: give your dog treats only during training. Do not feed your dog food that is harmful to it. There are many foods that are not only bad for your dog, but can also be dangerous to your dog's health. Do not give your dog chocolate, avocados, bread, raisins, grapes, onions or garlic.</p>			
+			</div>
+			<div class="photo">
+				<img src='images/2ab57fc5945a91dbbcc6a18eabeb09ff.jpg'>
+			</div>
+			<div class ="Info2">
+				<h1>Veterinary control</h1>
+			</div>
+			<div class="information2">
+				<p>Make sure you have a good and reliable veterinarian.  A good way to choose a veterinarian is to see if they answer your questions quickly and knowledgeably, and to see how they interact with your pet. You will need to bring your dog in for regular checkups, so if your vet is too busy, you may want to look for a new one. Feel free to change veterinarians even after you take your dog to one.
+                    In case of emergency, you also need to know about the veterinary clinic, which is open 24 hours a day and on weekends.
+                    Get your dog vaccinated. Your veterinarian will recommend what diseases are common in your area and what diseases should be vaccinated against. Typically, vaccination is supported by regular booster injections, which may be given annually or every three years, depending on the disease.
+                    Prevention of parasites.  The exact frequency depends on the pet's lifestyle. A domestic dog is at less risk for worms than a hunting dog, and this will influence your veterinarian's recommendations on how often to deworm. A low-risk dog may need roundworm treatment two or three times a year, while a high-risk dog will need treatment monthly.
+                    Also use flea and tick preventatives.
+                    Sterilization or castration . This procedure reduces the risk of certain diseases, such as mammary cancer and pyometra (pus in the uterus) in female dogs, and aggression and prostate disease in dogs. It is also a responsible approach as it reduces the problem of accidental breeding and pet overpopulation.
+                    Keep in mind that dogs with poor sexual development are at higher risk for certain health problems. For example, the pet may be at greater risk for certain types of cancer and thyroid problems, as well as heart disease..</p>
+
+			</div>
+			<div class ="Photo1">
+				<img src="images/Ветеринарный-врач-для-собак-250x250.jpg">
+			</div>
+			<div class="info3">
+				<h1>Grooming</h1>
+			</div>
+			<div class ='information3'>
+				<p>Brush your dog regularly. The frequency of grooming varies widely depending on the type of dog you have and how much shedding he does. Regular brushing of your pet will help reduce shedding and provide an opportunity to assess the condition of the animal's body. To care for the coat, special  combs and furminators are used , which will help the owner cope with this task without any problems.
+                    Check for fleas and ticks daily during warm weather.</p>
+			</div>
+			<div class ="Photo2">
+				<img src="images/kak-vychesyvat-sobaku-23.jpg">
+			</div>
+			<div class="info4">
+				<h1>Bathing a dog</h1>
+			</div>
+			<div class ='information4'>
+				<p>
+                    A dirty coat can lead to secondary skin infections, so be prepared to bathe your dog  with a special shampoo if he gets very dirty. Before bathing, comb or remove any tangles from the coat. Most dogs do not need bathing more than once a month, depending on the breed and activity.
+				</p>
+			</div>
+			<div class="Photo3">
+				<img src="images/wishwish.jpg">
+			</div>
+			<div class="info5">
+				<h1>Nail care</h1>
+			</div>
+			<div class="information5">
+				<p>A dog's nails do not require special care, as they wear down during a walk. But if the nails grow quickly and the natural process does not help, carefully trim them with a special nail clipper . Remove only the white part of the claw, and do not touch the pulp under any circumstances. Teach your dog to associate nail trimming with good things. After the haircut, give your pet a treat or go for a walk. Whatever you do, stay positive while trimming, no matter how difficult it may be to trim your dog's nails.
+                </p>
+			</div>
+			<div class="Photo4">
+				<img src="images/kogti.jpg">
+			</div>
+			<div class="Info5">
+				<h1>Dental care</h1>
+			</div>
+            <div class="Information5">
+				<p>Gum disease can not only cause pain and discomfort in dogs, but it can also be a warning sign of more serious health problems such as kidney, liver or heart disease. It is correct to brush your dog's teeth every day, but it is difficult and inconvenient, so it is recommended to clean the mouth at least 2-3 times a week. When brushing your dog's teeth at home, the first things you will need are  a pet-grade  toothbrush and vet-approved toothpaste . You can supplement between cleanings  with dental chews  for dogs. These treatments can help reduce plaque buildup, but they are not enough to keep your dog's teeth healthy, so you will still need to brush your dog's teeth regularly.
+                </p></div>
+                <div class="Photo5">
+                    <img src="images/teeth.jpg">
+                </div>
+                <div class="info5">
+                    <h1>Walk</h1>
+                </div>
+                <div class="Information5">
+                    <p>The dog is walked at least twice a day - in the morning and in the evening, especially for large breeds. Animals need exercise to burn calories, stimulate their minds and stay healthy. Individual activity needs vary depending on breed, gender, age and health level. Exercise also helps dogs avoid boredom, which can lead to destructive behavior. Supervised play and entertainment will satisfy many of your pet's instinctual urges: digging, running, chewing, searching and chasing.
+                    </p></div>
+                    <div class="Photo5">
+                        <img src="images/walk.jpg">
+                    </div>
+                    <div class="info5">
+                        <h1>Training</h1>
+                    </div>
+                    <div class="Information5">
+                        <p>Dogs, like people, get bored. In order for a dog to lead a full life, it must be trained. It is important to teach your dog to sit, stand and come when called.
+                            Most dogs enjoy individual attention during training, and these activities help the dog bond with their owner. If you use reward-based training, where only correct behavior is rewarded and no punishment is used, the training experience will be a very happy and positive one for the puppy.
+                            Train for about 10-20 minutes twice a day, depending on the dog's concentration level. Always try to end each session on a positive note.
+                            Reward your dog every time he obeys your command. You can use small treats (without overfeeding your dog) or simply shower your dog with love when he does something right. The reward you choose depends on what motivates your dog.
+                            Caring for a dog is not as difficult as it might seem at first glance. Attentiveness, patience and love for your pet are your main helpers in this matter.
+                        </p></div>
+                        <div class="Photo6">
+                            <img src="images/dres.jpg">
+                        </div>
+        </div>
+
+        </body>

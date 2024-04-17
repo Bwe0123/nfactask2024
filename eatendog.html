@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="open.js" defer></script>  
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" href="double.css"> 
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"> 
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-list">
+           <a href="index2.html"><img src="images/icons8-собака-96.png"  width="100px" height="90px" class="main-icon"></a> 
+        </div>
+		<div class="nav">
+			<a href="eatendog.html">Nutrition</a>
+            <a href="uhoddog.html">Care</a>
+            <a href="ai.html">GavGPT</a>
+			<a href="index.html">Bonus</a>
+		</div>
+		<div class="search active">
+			<div class ='icon'></div>
+			<div class="input"> 
+				<input type="text" placeholder="Breed search" id="mySearch" class="input1">
+			</div>
+			<span class="clear" onclick="Clear()"></span>
+			<button id="searchButton">Поиск</button>
+		</div>
+			<div class="social-icons">
+				<a href="https://www.linkedin.com/in/bekzat-temirbolat-b93790304/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bm1uNnBoKTbGpGmxYRnSr3w%3D%3D"><i class="ri-linkedin-fill"></i></a>
+				<a href="https://t.me/calmativeq"><i class="ri-telegram-fill"></i></a>
+				<a href="https://github.com/Bwe0123"><i class="ri-github-fill"></i></a>
+			</div>
+	</div>
+		<div id="main-content">
+		<script>
+    		document.addEventListener('DOMContentLoaded', function() {
+      		const searchInput = document.getElementById('mySearch');
+			const searchButton = document.getElementById('searchButton');
+			searchInput.addEventListener('keydown', function(event) {
+				if (event.key === 'Enter') {
+				event.preventDefault(); 
+				searchFunction(); 
+				}
+			});
+			searchButton.addEventListener('click', searchFunction);
+
+			async function searchFunction() {
+				const searchTerm = searchInput.value.trim();
+				if (searchTerm !== '') {
+				window.location.href = `index3.html?q=${encodeURIComponent(searchTerm)}`;
+				}
+			}
+			});
+     	</script>
+		</div>
+        <div class ="dog eaten">
+            <div class ="info">
+                <h1>Super premium dog food</h1>
+            </div>
+            <div class ="information">
+				<p>The best choice for pet owners is a dog food that contains essential calories, minerals, vitamins and nutrients so that it can be used as a complete diet. Is it possible? Yes, if you choose wisely. Good options can be found among mid-price products, but many still prefer to buy super premium dog food. Let's tell you why.</p>
+			</div>
+			<div class="information1">
+				
+				<p>1.This dog food contains predominantly animal protein rather than plant protein. It gives your pet those amino acids that are not synthesized in the body. Vegetable protein contains either very few such substances or none at all.</p>
+			    <p>2.Meat accounts for at least 40% of the ingredients. This explains the higher cost compared to premium dog foods. Price is not always an indicator of quality, but in this case this rule is indeed fair. Manufacturers use different types of meat: chicken, lamb, beef, rabbit. The benefits of such a diet are obvious. Moreover, the more diverse the meat composition, the greater the nutritional value.</p>
+	            <p>3.Super premium food contains a minimum of grains. There are also those where grains are completely absent. Your four-legged friends are carnivores by nature; foods such as soy, corn, and grains are not digestible by their bodies. At the same time, manufacturers sometimes introduce them into the diet, thereby reducing its cost.</p>		
+                <p>4.The choice of super premium dog food is usually very large. The manufacturer has formulations for different breeds, adult pets and puppies, animals with different physiological characteristics.</p>			
+			</div>
+			<div class="photo">
+				<img src='images/doggy2.jpg'>
+			</div>
+			<div class ="info2">
+				<h1>How to choose?</h1>
+			</div>
+			<div class="information2">
+				<p>*Offal. There are some useful and some not very useful. Manufacturers add them to replace artificial additives - this is a good thing. From offal the pet receives some microelements and vitamins that are not contained or are present in small quantities in muscle meat. For example, it is cartilage tissue, ligaments and bones that contain chondroitin and glucosamine, which are necessary for the functioning of animal joints (especially in old age). There is also a downside. The digestibility of such protein is lower; dogs do not digest it well, which can cause diarrhea.</p>
+				<p>*Dehydrated meat. This is meat that has undergone special processing to reduce the amount of moisture, and eventually became meat meal - this is how manufacturers increase its content in super premium and some premium feeds.</p>
+				<p>*Thermox. It is an antioxidant found in dog foods. It protects fats and fat-soluble vitamins from oxidation, preserves the quality of meat/fish meal, thereby increasing the shelf life of the feed. No harm to the pet's health or side effects from the thermox were detected</p>
+				<p>*Propyl gallate (E310). This is an artificial preservative that prevents fat oxidation. It is not recommended to purchase dog food that contains it. It can cause allergies, kidney problems, and stomach irritation. The preservative is prohibited in the production of baby food.</p>
+				<p>*Taurine is an important feed component. It is beneficial for the cardiac system. In dog food, its content is lower than in cat food (the need for it is lower), but its presence is highly desirable.</p>
+			</div>
+			<div class =photo1>
+				<img src="images/1697524454_flomaster-top-p-sobaka-na-zadnikh-lapakh-risunok-instagram-15-removebg-preview.png">
+			</div>
+			<div class="info3">
+				<h1>Rating of good food</h1>
+				<h1>1.BRIT PREMIUM BY NATURE ADULT L</h1>
+			</div>
+			<div class ='information3'>
+				<p>This is a super premium food for large breed dogs. The main source of protein is of animal origin - chicken. Its percentage is 45%, which is quite good, and 25% is dehydrated meat, the rest is boneless meat.
+					Fatty acids, a bouquet of medicinal herbs, vegetables and fruits are responsible for the health of dogs in Brit premium food. For joint health, the proportion of calcium, chondroitin (natural sources are used: mussels, crustacean shells) and glucosamine in the diet is increased. Collagen is responsible for ligaments.
+			     	Nutritional content is limited. If your dog is prone to gaining excess weight, this food is perfect. An additional effect is a reduction in the load on digestion and joints.</p>
+			</div>
+			<div class ="photo2">
+				<img src="images/ff1ca7b18f03d324dedc3d5788e6d757.png">
+			</div>
+			<div class="info4">
+				<h1>2.FARMINA N&D DOG, WITH BOAR, APPLE AND PUMPKIN FLAVORS</h1>
+			</div>
+			<div class ='information4'>
+				<p>
+				 A food with a completely natural composition that is suitable for dogs with sensitive digestion and allergies. Designed for pets of medium-sized breeds. It contains fresh and dehydrated wild boar meat (it is an exotic species, so the risk of allergic reactions is minimal). Fats are of animal origin.
+                 Super premium food from this line receives many good reviews, from which we can judge that pets eat it with pleasure (after all, we can only judge the composition, and the dog “votes” for taste).
+                 Cereals are replaced by a large selection of fruits and vegetables that provide the dog with vitamins and minerals, and there are also natural antioxidants - green tea, grape seed and aloe vera extracts.
+				</p>
+			</div>
+			<div class="photo3">
+				<img src="images/10a50e922bca5229d0e7fb83ed2a97d0.png">
+			</div>
+			<div class="info5">
+				<h1>3.FARMINA N&D DOG, LAMB WITH BLUEBERRY AND PUMPKIN FLAVORS</h1>
+			</div>
+			<div class="information5">
+				<p>The pet's growing body is enriched with chicken and fish oil.
+					The diet contains pea starch (20%). Peas are a good substitute for cereals (better digestible, lower glycemic index), but there is debate about starch in zoo communities (and even among experts). It does not cause harm, but there is no consensus on how useful it is.</p>
+			</div>
+			<div class="photo4">
+				<img src="images/ede57040294b51565d05415c3089cfd9-removebg-preview.png">
+			</div>
+
+        </div>
+        </body>

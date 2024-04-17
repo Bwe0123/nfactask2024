@@ -1,0 +1,77 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.world {
+  overflow: hidden;
+  position: relative;
+}
+
+.score {
+  position: absolute;
+  font-size: 3vmin;
+  right: 1vmin;
+  top: 1vmin;
+  color:  white;
+}
+
+.start-screen {
+  position: absolute;
+  background-color:#000;
+  color:#fff;
+  font-size:30px;
+  text-align:center;
+  line-height:160%;
+  font-size: 5vmin;
+  top: 50%;
+  color:white;
+  height:100%;
+  width:100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hide {
+  display: none;
+}
+
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 300%;
+  bottom: 0;
+  height:10px;
+  left: calc(var(--left) * 1%)
+}
+html{
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  background: #000;
+
+}
+ 
+
+.dino {
+  --bottom: 0;
+  position: absolute;
+  left: 10%;
+  height: 20%;
+  bottom: calc(var(--bottom) * 1%);
+}
+
+.cactus {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 20%;
+  bottom: 0;
+}

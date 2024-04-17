@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="open.js" defer></script>  
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" href="double.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"> 
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-list">
+           <a href="index2.html"><img src="images/icons8-собака-96.png"  width="100px" height="90px" class="main-icon"></a> 
+        </div>
+		<div class="nav">
+			<a href="eatendog.html">Nutrition</a>
+            <a href="uhoddog.html">Care</a>
+            <a href="ai.html">GavGPT</a>
+			<a href="index.html">Bonus</a>
+		</div>
+		<div class="search active">
+			<div class ='icon'></div>
+			<div class="input"> 
+				<input type="text" placeholder="Breed search" id="mySearch" class="input1">
+				<button id="searchButton">Поиск</button>
+			</div>
+			<span class="clear" onclick="Clear()"></span>
+		</div>
+			<div class="social-icons">
+				<a href="https://www.linkedin.com/in/bekzat-temirbolat-b93790304/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bm1uNnBoKTbGpGmxYRnSr3w%3D%3D"><i class="ri-linkedin-fill"></i></a>
+				<a href="https://t.me/calmativeq"><i class="ri-telegram-fill"></i></a>
+				<a href="https://github.com/Bwe0123"><i class="ri-github-fill"></i></a>
+			</div>
+	</div>
+	 <div id ="main-content">
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const urlParams = new URLSearchParams(window.location.search);
+				const searchTerm = urlParams.get('q');
+				if (searchTerm) {
+					searchByFirstLetter(searchTerm);
+				}
+		
+				document.getElementById('mySearch').addEventListener('keydown', function(event) {
+					if (event.key === 'Enter') {
+						searchFunction();
+					}
+				});
+		
+				function searchFunction() {
+					const userInput = document.getElementById('mySearch').value.trim();
+					searchByFirstLetter(userInput);
+				}
+		
+				async function searchByFirstLetter(letter) {
+					try {
+						const response = await axios.get(`https://dog.ceo/api/breeds/list/all`);
+						const breeds = response.data.message;
+						const filteredBreeds = Object.keys(breeds).filter(breed =>
+							breed.toLowerCase().startsWith(letter.toLowerCase())
+						);
+						await displayBreeds(filteredBreeds);
+					} catch (error) {
+						console.error('Error in searchByFirstLetter:', error);
+					}
+				}
+		
+				async function displayBreeds(breeds) {
+					const dogContainer = document.getElementById('main-content');
+					dogContainer.innerHTML = '';
+		
+					if (breeds.length > 0) {
+						breeds.forEach(async (breed) => {
+							try {
+								const imgResponse = await axios.get(`https://dog.ceo/api/breed/${breed}/images/random`);
+								const imageUrl = imgResponse.data.message;
+								const breedDiv = document.createElement('div');
+								breedDiv.classList.add('content-item');
+								breedDiv.innerHTML = `
+									<div>
+										<img src="${imageUrl}" id='beks' alt="Image of ${breed}">
+										<h2>${breed}</h2>
+									</div>
+								`;
+								dogContainer.appendChild(breedDiv);
+							} catch (error) {
+								console.error('Error fetching image for breed', breed);
+							}
+						});
+					} else {
+						try {
+							const imgResponse = await axios.get(`https://dog.ceo/api/breeds/image/random`);
+							const imageUrl = imgResponse.data.message;
+							const breedDiv = document.createElement('div');
+							breedDiv.classList.add('content-item');
+							breedDiv.innerHTML = `
+								<div>
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0TULZPFK6a7H742U0PRKFIgsVKD-_8IuLq7_RbzPwGg&s" id='beks'>
+									<h2>Nothing found</h2>
+								</div>
+							`;
+							dogContainer.appendChild(breedDiv);
+						} catch (error) {
+							console.error('Error fetching random image');
+						}
+					}
+				}
+			});
+		</script>
+		
+	</div>
+		
+			
+</body>
