@@ -12,4 +12,4 @@
 Таким образом, сайт "BestDogCare" не только предоставляет широкий спектр информации о кормах, уходе и породах собак, но и активно использует передовые технологии, чтобы обеспечить качественное обслуживание и поддержку владельцам собак.
 
 ## Installation
-![Screenshot](entaclehttps://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot](https://github.com/Bwe0123/nfactask2024/blob/main/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20(99).png)
