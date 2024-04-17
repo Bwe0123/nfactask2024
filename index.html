@@ -1,20 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="open.js" defer></script>  
+	<link rel="stylesheet" href="double.css"> 
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"> 
+	
 </head>
 <body>
-  <div class="world" data-world>
-    <div class="score" data-score>0</div>
-    <div class="start-screen" data-start-screen><p>Press Any Key To Start</p> <p><a href="index2.html">HOME</a></p></div>
-    <img src="imgs/stock-photo-a-perfectly-seamless-d-illustration-of-a-road-589491770-removebg-preview.png" class="ground" data-ground>
-    <img src="imgs/stock-photo-a-perfectly-seamless-d-illustration-of-a-road-589491770-removebg-preview.png" class="ground" data-ground>
-    <img src="imgs/doggydino" class="dino" data-dino>
-  </div>
+	<div class="container">
+		<section class="gallery">
+
+			<div class="frame">
+				<div class="frame__content">
+					<h2>All about dogs</h2>
+				</div>
+			</div>
+
+			<div class="frame">
+				<div class="frame__content">
+					<div class="frame_top" style="background-image: url(images/beautiful-pet-portrait-of-dog.jpg)"></div>
+				</div>
+			</div>
+
+			<div class="frame frame_bg">
+				<div class="frame__content">
+					<div class="frame-media frame-media_right" src="images/doggy2.jpg" ></div>
+				</div>
+			</div>
+
+			<div class="frame">
+				<div class="frame__content text-right">
+					<h3>Your best friend</h3>
+					<p>According to veterinary scientist Dr John Bradshaw, a dog will smile to persuade its owner to show it affection.
+						Therefore, dogs are not always happy when they "smile" - they may even feel a little anxious and need reassurance. So go out and show your puppy how much you love him.</p>
+				</div>
+			</div>
+
+			<div class="frame frame_bg">
+				<div class="frame__content">
+					<div class="frame-media frame-media_left" style="background-image: url(images/doggy2.jpg)"></div>
+				</div>
+			</div>
+
+			<div class="frame frame_bg">
+				<div class="frame__content">
+					<div class="frame-media frame-media_right" style="background-image: url(images/doggy3.jpg)"></div>
+				</div>
+			</div>
+
+			<div class="frame">
+				<div class="frame__content text-left">
+					<p>Dogs are the only animals capable of recognizing human emotions and empathizing with their owners.
+						Dog nose prints are unique - no two are alike in the whole world.</p>
+			</div>
+
+			
+		</section>
+	</div>
+	
+	<div class="navbar">
+        <div class="nav-list">
+           <a href="index.html"><img src="images/icons8-собака-96.png"  width="100px" height="90px" class="main-icon"></a> 
+        </div>
+		<div class="nav">
+			<a href="eatendog.html">Nutrition</a>
+            <a href="uhoddog.html">Care</a>
+            <a href="ai.html">GavGPT</a>
+			<a href="index2.html">Bonus</a>
+		</div>
+		<div class="search active">
+			<div class ='icon'></div>
+			<div class="input"> 
+				<input type="text" placeholder="Breed search" id="mySearch" class="input1">
+				<button id="searchButton">Поиск</button>
+			</div>
+			<span class="clear" onclick="Clear()"></span>
+		</div>
+			<div class="social-icons">
+				<a href="https://www.linkedin.com/in/bekzat-temirbolat-b93790304/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3Bm1uNnBoKTbGpGmxYRnSr3w%3D%3D"><i class="ri-linkedin-fill"></i></a>
+				<a href="https://t.me/calmativeq"><i class="ri-telegram-fill"></i></a>
+				<a href="https://github.com/Bwe0123"><i class="ri-github-fill"></i></a>
+			</div>
+	</div>
+		<div id="main-content"></div>
+		
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const searchInput = document.getElementById('mySearch');
+				const searchButton = document.getElementById('searchButton');
+		
+				if (searchInput && searchButton) {
+					searchInput.addEventListener('keydown', function(event) {
+						if (event.key === 'Enter') {
+							event.preventDefault();
+							searchFunction();
+						}
+					});
+		
+					searchButton.addEventListener('click', searchFunction);
+		
+					async function searchFunction() {
+						const searchTerm = searchInput.value.trim();
+						if (searchTerm !== '') {
+							window.location.href = `index3.html?q=${encodeURIComponent(searchTerm)}`;
+						} else {
+							alert('Введите поисковый запрос');
+						}
+					}
+				} else {
+					console.error('Элементы "mySearch" и/или "searchButton" не найдены на странице');
+				}
+			});
+		</script>		
 </body>
 </html>
